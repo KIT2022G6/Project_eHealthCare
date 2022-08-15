@@ -43,63 +43,83 @@ class Footer extends Component {
               </a>
             </div>
           </section>
+
           <nav>
             <ul className="footer-menu">
               <li>
                 <div class="widget-column footer-active-4">
                   <section id="text-3" class="widget widget_text">
                     <h4 class="widget-title">About Us</h4>
-                    <div class="textwidget">
-                      Medical Way is responsive health theme for doctors, <br />
-                      hospitals, medical clinics, pediatric, dental, gynecology, <br />
-                      general therapist and all medial websites. Get perfect, <br />
-                      modern and professional website with no coding knowledge. <br />
-                      Making your website your own is easier than ever before with Medical Way.
+                    <div class="textwidget"><br />
+                      <p>
+                        Medical Way is responsive health theme for doctors, <br />
+                        hospitals, medical clinics, pediatric, dental, gynecology, <br />
+                        general therapist and all medial websites. Get perfect, <br />
+                        modern and professional website with no coding knowledge. <br />
+                        Making your website your own is easier than ever before <br />
+                        with Medical Way.
+                      </p>
                     </div>
                   </section>
                 </div>
               </li>
 
               <li>
-                <div class="widget-column footer-active-4" className="text-center">
+                <div class="widget-column footer-active-4">
                   <section id="recent-posts-3" class="widget widget_recent_entries">
-                    <h4 class="widget-title">Recent Posts</h4>
+                    <h4 class="widget-title" className="text-center">Recent Posts</h4>
                     <ul><br />
-                      <li>Aliquam mollis consequat est</li> <br />
-                      <li>Quisque pretium sodales arcu</li> <br />
-                      <li>Nibh dignissim ornare egestas</li> <br />
-                      <li>Donec pretium aliquet dapibus</li>
-
+                      <p>Aliquam mollis consequat est</p>
+                      <p>Quisque pretium sodales arcu</p>
+                      <p>Nibh dignissim ornare egestas</p>
+                      <p>Donec pretium aliquet dapibus</p>
                     </ul>
                   </section>
                 </div>
               </li>
 
               <li>
-                <div class="widget-column footer-active-4" className="text-center">
+                <div class="widget-column footer-active-4">
                   <section id="text-2" class="widget widget_text">
-                    <h4 class="widget-title">Opening Hours</h4>
+                    <h4 class="widget-title" className="text-center">Opening Hours</h4>
                     <div class="textwidget">
                       <ul><br />
-                        <li>Monday - Friday : 06:00 Am - 08:00 Pm</li> <br />
-                        <li>Saturday : 08:00 Am - 04:00 Pm</li> <br />
-                        <li>Sunday : 10:00 Am - 02:00 Pm</li> <br />
-                        <li>Emergency : (anytime call us)</li>
+                        <p>Monday - Friday : 06:00 Am - 08:00 Pm</p>
+                        <p>Saturday : 08:00 Am - 04:00 Pm</p>
+                        <p>Sunday : 10:00 Am - 02:00 Pm</p>
+                        <p>Emergency : (anytime call us)</p>
                       </ul>
                     </div>
                   </section>
                 </div>
               </li>
-            </ul>
 
-            <p className="copyright text-center">
-              © {new Date().getFullYear()}{" "}
-              <a href="http://www.creative-tim.com">Creative Tim</a>, made with
-              love for a better web
-            </p>
+              <li>
+                <div class="widget-column footer-active-4">
+                  <section id="search-3" class="widget widget_search">
+                    <h4 class="widget-title" className="text-center">Liên hệ</h4>
+                    <ul><br />
+                      <p>
+                        <i className="fas fa-home me-3"></i> 36 Hoàng Cầu, Q.Đống Đa, Hà
+                        Nội
+                      </p>
+                      <p>
+                        <i className="fas fa-envelope me-3"></i> eHealthCare@gmail.com.vn
+                      </p>
+                      <p>
+                        <i className="fas fa-phone me-3"></i> + 01 234 567 88
+                      </p>
+                      <p className="text-center">
+                        © {new Date().getFullYear()}{" "}, made with love for a better web
+                      </p>
+                    </ul>
+                  </section>
+                </div>
+              </li>
+            </ul>
           </nav>
         </Container>
-      </footer>
+      </footer >
     );
   }
 }

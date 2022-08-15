@@ -13,16 +13,18 @@ import java.util.Set;
 @Setter
 @ToString
 public class Profile {
-    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    @Id
     @Column(name = "profileID", unique = true)
-    private Long pProID;
+    private String proID;
 
     private String pDia;
-    private Date pHis;
+    private String pHis;
 
-//    @OneToMany(mappedBy = "papID", cascade = CascadeType.ALL)
-//    private Set<Paper> listPaper;
+    @OneToMany(mappedBy = "proID", cascade = CascadeType.ALL)
+	private Set<Paper> listPaper;
 
-
+ 
 }

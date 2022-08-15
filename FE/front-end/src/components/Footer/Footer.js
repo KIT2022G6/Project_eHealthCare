@@ -97,7 +97,7 @@ class Footer extends Component {
               <li>
                 <div class="widget-column footer-active-4">
                   <section id="search-3" class="widget widget_search">
-                    <h4 class="widget-title" className="text-center">Liên hệ</h4>
+                    <h4 class="widget-title" className="text-center">Contact Us</h4>
                     <ul><br />
                       <p>
                         <i className="fas fa-home me-3"></i> 36 Hoàng Cầu, Q.Đống Đa, Hà

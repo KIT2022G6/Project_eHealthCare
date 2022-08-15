@@ -26,26 +26,52 @@ class Footer extends Component {
           <nav>
             <ul className="footer-menu">
               <li>
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Home
-                </a>
+                <div class="widget-column footer-active-4">
+                  <section id="text-3" class="widget widget_text">
+                    <h4 class="widget-title">About Us</h4>
+                    <div class="textwidget">
+                      Medical Way is responsive health theme for doctors, <br />
+                      hospitals, medical clinics, pediatric, dental, gynecology, <br />
+                      general therapist and all medial websites. Get perfect, <br />
+                      modern and professional website with no coding knowledge. <br />
+                      Making your website your own is easier than ever before with Medical Way.
+                    </div>
+                  </section>
+                </div>
               </li>
+
               <li>
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Company
-                </a>
+                <div class="widget-column footer-active-4">
+                  <section id="recent-posts-3" class="widget widget_recent_entries">
+                    <h4 class="widget-title">Recent Posts</h4>
+                    <ul><br />
+                      <li>Aliquam mollis consequat est</li> <br />
+                      <li>Quisque pretium sodales arcu</li> <br />
+                      <li>Nibh dignissim ornare egestas</li> <br />
+                      <li>Donec pretium aliquet dapibus</li>
+
+                    </ul>
+                  </section>
+                </div>
               </li>
+
               <li>
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Blog
-                </a>
+                <div class="widget-column footer-active-4">
+                  <section id="text-2" class="widget widget_text">
+                    <h4 class="widget-title">Opening Hours</h4>
+                    <div class="textwidget">
+                      <ul><br />
+                        <li>Monday - Friday : 06:00 Am - 08:00 Pm</li> <br />
+                        <li>Saturday : 08:00 Am - 04:00 Pm</li> <br />
+                        <li>Sunday : 10:00 Am - 02:00 Pm</li> <br />
+                        <li>Emergency : (anytime call us)</li>
+                      </ul>
+                    </div>
+                  </section>
+                </div>
               </li>
             </ul>
+            
             <p className="copyright text-center">
               © {new Date().getFullYear()}{" "}
               <a href="http://www.creative-tim.com">Creative Tim</a>, made with

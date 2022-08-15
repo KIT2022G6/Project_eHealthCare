@@ -23,6 +23,32 @@ class Footer extends Component {
     return (
       <footer className="footer px-0 px-lg-3">
         <Container fluid>
+          <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <div className="me-5 d-none d-lg-block">
+              <span>Get connected with us on social networks:</span>
+            </div>
+
+            <div>
+              <a href="" className="me-4 text-reset">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="" className="me-4 text-reset">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="" className="me-4 text-reset">
+                <i className="fab fa-google"></i>
+              </a>
+              <a href="" className="me-4 text-reset">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="" className="me-4 text-reset">
+                <i className="fab fa-linkedin"></i>
+              </a>
+              <a href="" className="me-4 text-reset">
+                <i className="fab fa-github"></i>
+              </a>
+            </div>
+          </section>
           <nav>
             <ul className="footer-menu">
               <li>
@@ -41,7 +67,7 @@ class Footer extends Component {
               </li>
 
               <li>
-                <div class="widget-column footer-active-4">
+                <div class="widget-column footer-active-4" className="text-center">
                   <section id="recent-posts-3" class="widget widget_recent_entries">
                     <h4 class="widget-title">Recent Posts</h4>
                     <ul><br />
@@ -56,7 +82,7 @@ class Footer extends Component {
               </li>
 
               <li>
-                <div class="widget-column footer-active-4">
+                <div class="widget-column footer-active-4" className="text-center">
                   <section id="text-2" class="widget widget_text">
                     <h4 class="widget-title">Opening Hours</h4>
                     <div class="textwidget">
@@ -71,7 +97,7 @@ class Footer extends Component {
                 </div>
               </li>
             </ul>
-            
+
             <p className="copyright text-center">
               © {new Date().getFullYear()}{" "}
               <a href="http://www.creative-tim.com">Creative Tim</a>, made with

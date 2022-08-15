@@ -6,37 +6,33 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.Set;
 
 @Entity
 @Getter
 @Setter
 @ToString
 public class Paper {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "paperID", unique = true)
-    private Long papID;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    private int pOrd, pRoo;
-    private Date pVsi;
+	@Id
+	@Column(name = "paperID", unique = true)
+	private String papID;
 
-    @ManyToOne
-    @JoinColumn(name = "doctorID")
-    private Doctor docID;
+	private int pOrd, pRoo;
+	private Date pVsi;
 
-    @ManyToOne
-    @JoinColumn(name = "patientID")
-    private Patient patID;
+	@ManyToOne
+	@JoinColumn(name = "doctorID")
+	private Doctor docID;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "preID", nullable = false)
-    private Prescription preID;
-
-//    @OneToOne(mappedBy = "papID")
-//    private Prescription preID;
-
-    @ManyToOne
-    @MapsId("papID")
-    @JoinColumn(name = "papID")
-    private Profile pProID;
+	@ManyToOne
+	@JoinColumn(name = "patientID")
+	private Patient patID;
+	
+	@ManyToOne
+	@JoinColumn(name = "profileID")
+	private Profile proID;
+	
 }

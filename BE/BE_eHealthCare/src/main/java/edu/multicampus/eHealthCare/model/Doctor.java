@@ -13,10 +13,12 @@ import java.util.Set;
 @Setter
 @ToString
 public class Doctor {
-	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Id
 	@Column(name = "doctorID", unique = true)
-	private Long docID;
+	private String docID;
 
 	@Column(nullable = false)
 	private String dName, dPhone, dEmail;
@@ -24,7 +26,7 @@ public class Doctor {
 	private int dAge;
 
 	@ManyToOne
-	@JoinColumn(name = "deppartmentID")
+	@JoinColumn(name = "departmentID")
 	private Department depID;
 
 	@ManyToOne

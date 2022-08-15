@@ -12,19 +12,21 @@ import java.util.Set;
 @Setter
 @ToString
 public class Prescription {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "prescriptionID", unique = true)
-    private Long preID;
 
-    private int pAmo, pDos;
-    private String pDet;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	@Id
+	@Column(name = "prescriptionID", unique = true)
+	private String precriptionID;
 
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "preID", nullable = false)
-//    private Paper papID;
+	private int pAmo, pDos;
+	private String pDet;
 
-    @OneToMany(mappedBy = "preID", cascade = CascadeType.ALL)
-    private Set<MedInvoice> listMedInvoice;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "paperID", nullable = false)
+    private Paper papID;
+
+	@OneToMany(mappedBy = "precriptionID", cascade = CascadeType.ALL)
+	private Set<MedInvoice> listMedInvoice;
 
 }

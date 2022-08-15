@@ -23,6 +23,7 @@ import Icons from "views/Icons.js";
 import Maps from "views/Maps.js";
 import Notifications from "views/Notifications.js";
 import Upgrade from "views/Upgrade.js";
+import Test from "views/Test.js"
 
 const dashboardRoutes = [
   {
@@ -80,6 +81,14 @@ const dashboardRoutes = [
     name: "Notifications",
     icon: "nc-icon nc-bell-55",
     component: Notifications,
+    layout: "/admin"
+  },
+
+  {
+    path: "/test",
+    name: "Test",
+    icon: "nc-icon nc-bell-55",
+    component: Test,
     layout: "/admin"
   }
 ];

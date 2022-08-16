@@ -22,10 +22,9 @@ public class Prescription {
 	private int pAmo, pDos;
 	private String pDet;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "paperID", nullable = false)
-    private Paper papID;
-
+    @OneToMany(mappedBy = "recordID", cascade = CascadeType.ALL)
+	private Set<MedicalRecord> listRecord;
+    
 	@OneToMany(mappedBy = "precriptionID", cascade = CascadeType.ALL)
 	private Set<MedInvoice> listMedInvoice;
 

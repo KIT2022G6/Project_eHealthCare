@@ -20,7 +20,11 @@ public class Schedule {
 	private String schID;
 
 	private String sWor, sShi;
-
+	
+	@ManyToOne
+	@JoinColumn(name = "fk_doctorID")
+	private Doctor doctorID;
+	
 	@OneToMany(mappedBy = "schID", cascade = CascadeType.ALL)
 	private Set<Doctor> listDoctor;
 }

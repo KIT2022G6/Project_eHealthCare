@@ -23,9 +23,13 @@ public class TotalInvoice {
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "papID", nullable = false)
-	private Paper papID;
+	private Appointment papID;
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "medInvoiceID", nullable = false)
 	private MedInvoice medInvoiceID;
+	
+	@ManyToOne
+	@JoinColumn(name = "pharmacyID")
+	private Pharmacy pharmacyID;
 }

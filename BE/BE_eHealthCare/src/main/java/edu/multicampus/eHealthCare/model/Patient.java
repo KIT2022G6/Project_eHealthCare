@@ -24,19 +24,19 @@ public class Patient {
 	
 	@Id
 	@Column(name = "patientID", unique = true)
-	private String patID;
+	private String patientID;
 
 	@Column(nullable = false)
-	private String pFullName, pAddress, pPhone, pBloodtype;
+	private String paUsername, paPassword, paFullName, paAddress, paPhone, paBloodtype;
 
 	@Column(nullable = false)
-	private Date pDob;
+	private Date paDob;
 
 	@Column(nullable = false)
-	private boolean pGender, pRhesus;
+	private boolean paGender, paRhesus;
 
 	@Column(columnDefinition = "INT(3) UNSIGNED ")
-	private int pWeight, pHeight, pHeartrate;
+	private int paWeight, paHeight, paHeartrate;
 
 	@ManyToOne
 	@JoinColumn(name = "insuranceID")

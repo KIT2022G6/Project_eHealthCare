@@ -12,19 +12,13 @@ import java.util.Set;
 @Setter
 @ToString
 public class Schedule {
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
-	@Id
-	@Column(name = "scheduleID", unique = true)
-	private String schID;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "scheduleID", unique = true)
+    private Long schID;
 
-	private String sWor, sShi;
-	
-	@ManyToOne
-	@JoinColumn(name = "fk_doctorID")
-	private Doctor doctorID;
-	
-	@OneToMany(mappedBy = "schID", cascade = CascadeType.ALL)
-	private Set<Doctor> listDoctor;
+    private String sWor, sShi;
+
+    @OneToMany(mappedBy = "schID", cascade = CascadeType.ALL)
+    private Set<Doctor> listDoctor;
 }

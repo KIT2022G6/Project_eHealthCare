@@ -12,18 +12,17 @@ import java.util.Set;
 @Getter
 @Setter
 @ToString
-public class Medicine {
+public class Profile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "medicineID", unique = true)
-    private Long medID;
+    @Column(name = "profileID", unique = true)
+    private Long pProID;
 
-    private String mName;
+    private String pDia;
+    private Date pHis;
 
-    private Date mExp;
-    private int mSto, mPri;
+//    @OneToMany(mappedBy = "papID", cascade = CascadeType.ALL)
+//    private Set<Paper> listPaper;
 
 
-    @OneToMany(mappedBy = "medID", cascade = CascadeType.ALL)
-    private Set<MedInvoice> listMedInvoice;
 }

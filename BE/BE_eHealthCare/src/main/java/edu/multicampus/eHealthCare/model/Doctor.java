@@ -13,20 +13,18 @@ import java.util.Set;
 @Setter
 @ToString
 public class Doctor {
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "doctorID", unique = true)
-	private String doctorID;
+	private Long docID;
 
 	@Column(nullable = false)
-	private String dName, dPhone, dEmail, dUsername, dPassword;
+	private String dName, dPhone, dEmail;
 	@Column(columnDefinition = "INT(3) UNSIGNED")
 	private int dAge;
-	
+
 	@ManyToOne
-	@JoinColumn(name = "departmentID")
+	@JoinColumn(name = "deppartmentID")
 	private Department depID;
 
 	@ManyToOne
@@ -34,5 +32,5 @@ public class Doctor {
 	private Schedule schID;
 
 	@OneToMany(mappedBy = "docID", cascade = CascadeType.ALL)
-	private Set<Appointment> listPaper;
+	private Set<Paper> listPaper;
 }

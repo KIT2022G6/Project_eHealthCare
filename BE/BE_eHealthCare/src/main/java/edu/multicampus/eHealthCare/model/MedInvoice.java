@@ -11,18 +11,18 @@ import javax.persistence.*;
 @Setter
 @ToString
 public class MedInvoice {
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "medInvoiceID", nullable = false)
+    private Long mediID;
 
-	@Id
-	@Column(name = "medInvoiceID", nullable = false)
-	private String medInvoiceID;
 
-	@ManyToOne
-	@JoinColumn(name = "precriptionID")
-	private Prescription precriptionID;
+    @ManyToOne
+    @JoinColumn(name = "preID")
+    private Prescription preID;
 
-	@ManyToOne
-	@JoinColumn(name = "medicineID")
-	private Medicine medicineID;
+    @ManyToOne
+    @JoinColumn(name = "medID")
+    private Medicine medID;
+
 }

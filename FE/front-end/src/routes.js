@@ -16,7 +16,9 @@
 
 */
 import Dashboard from "views/Dashboard.js";
-import UserProfile from "views/UserProfile.js";
+import UserProfile from "views/Patiens/UserProfile.js";
+import Booking from "views/Patiens/Booking.js";
+import MedicalRecord from "views/Patiens/MedicalRecord.js";
 import TableList from "views/TableList.js";
 import Typography from "views/Typography.js";
 import Icons from "views/Icons.js";
@@ -49,48 +51,19 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/table",
-    name: "Table List",
-    icon: "nc-icon nc-notes",
-    component: TableList,
+    path: "/booking",
+    name: "Booking",
+    icon: "nc-icon nc-tap-01",
+    component: Booking,
     layout: "/admin"
   },
   {
-    path: "/typography",
-    name: "Typography",
-    icon: "nc-icon nc-paper-2",
-    component: Typography,
+    path: "/medicalmecord",
+    name: "Medical Record",
+    icon: "nc-icon nc-album-2",
+    component: MedicalRecord,
     layout: "/admin"
   },
-  {
-    path: "/icons",
-    name: "Icons",
-    icon: "nc-icon nc-atom",
-    component: Icons,
-    layout: "/admin"
-  },
-  {
-    path: "/maps",
-    name: "Maps",
-    icon: "nc-icon nc-pin-3",
-    component: Maps,
-    layout: "/admin"
-  },
-  {
-    path: "/notifications",
-    name: "Notifications",
-    icon: "nc-icon nc-bell-55",
-    component: Notifications,
-    layout: "/admin"
-  },
-
-  {
-    path: "/test",
-    name: "Test",
-    icon: "nc-icon nc-bell-55",
-    component: Test,
-    layout: "/admin"
-  }
 ];
 
 export default dashboardRoutes;

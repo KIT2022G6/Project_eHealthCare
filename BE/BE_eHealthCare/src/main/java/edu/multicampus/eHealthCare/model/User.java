@@ -3,7 +3,6 @@ package edu.multicampus.eHealthCare.model;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,20 +17,15 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Insurance {
+public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
+	
 	@Id
-	@Column(name = "insuranceID", unique = true)
-	private String insID;
-
-	@Column(name = "iName")
-	private String iName;
-
-	@Column(name = "iDescription")
-	private String iDes;
-
-	@OneToMany(mappedBy = "insID", cascade = CascadeType.ALL)
-	private Set<Patient> listPatient;
+	private String userID;
+	
+	private String userName, password;
+	
+	//roles?
+	//
 }

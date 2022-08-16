@@ -18,6 +18,10 @@
 import Medicine from "views/Drugstores/Medicine";
 import DrugstoresProfile from "views/Drugstores/DrugstoresProfile";
 import MedicalRecord from "views/Drugstores/MedicalRecord";
+import DoctorProfile from "views/Doctor/DoctorProfile";
+import MedicalRecord1 from "views/Doctor/MedicalRecord";
+import Schedule from "views/Doctor/Schedule";
+import MedicalExaminationList from "views/Doctor/MedicalExaminationList";
 
 const dashboardRoutes = [
   {
@@ -39,6 +43,34 @@ const dashboardRoutes = [
     name: "Medical Record",
     icon: "nc-icon nc-notes",
     component: MedicalRecord,
+    layout: "/admin"
+  },
+  {
+    path: "/Doctor/DoctorProfile",
+    name: "Doctor Profile",
+    icon: "nc-icon nc-circle-09",
+    component: DoctorProfile,
+    layout: "/admin"
+  },
+  {
+    path: "/Doctor/MedicalRecord",
+    name: "Medical Record",
+    icon: "nc-icon nc-notes",
+    component: MedicalRecord1,
+    layout: "/admin"
+  },
+  {
+    path: "/Doctor/Schedule",
+    name: "Schedule",
+    icon: "nc-icon nc-notes",
+    component: Schedule,
+    layout: "/admin"
+  },
+  {
+    path: "/Doctor/MedicalExaminationList",
+    name: "Medical Examination List",
+    icon: "nc-icon nc-notes",
+    component: MedicalExaminationList,
     layout: "/admin"
   }
 ];

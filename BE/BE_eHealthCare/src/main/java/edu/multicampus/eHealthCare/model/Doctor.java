@@ -18,13 +18,13 @@ public class Doctor {
 
 	@Id
 	@Column(name = "doctorID", unique = true)
-	private String docID;
+	private String doctorID;
 
 	@Column(nullable = false)
-	private String dName, dPhone, dEmail;
+	private String dName, dPhone, dEmail, dUsername, dPassword;
 	@Column(columnDefinition = "INT(3) UNSIGNED")
 	private int dAge;
-
+	
 	@ManyToOne
 	@JoinColumn(name = "departmentID")
 	private Department depID;
@@ -34,5 +34,5 @@ public class Doctor {
 	private Schedule schID;
 
 	@OneToMany(mappedBy = "docID", cascade = CascadeType.ALL)
-	private Set<Paper> listPaper;
+	private Set<Appointment> listPaper;
 }

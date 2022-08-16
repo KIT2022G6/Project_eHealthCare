@@ -12,13 +12,13 @@ import java.util.Set;
 @Getter
 @Setter
 @ToString
-public class Paper {
+public class Appointment {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@Id
-	@Column(name = "paperID", unique = true)
-	private String papID;
+	@Column(name = "appointmentID", unique = true)
+	private String appointmentID;
 
 	private int pOrd, pRoo;
 	private Date pVsi;
@@ -31,8 +31,5 @@ public class Paper {
 	@JoinColumn(name = "patientID")
 	private Patient patID;
 	
-	@ManyToOne
-	@JoinColumn(name = "profileID")
-	private Profile proID;
 	
 }

@@ -6,8 +6,7 @@ import Typography from "views/Typography.js";
 import Icons from "views/Icons.js";
 import Maps from "views/Maps.js";
 import Notifications from "views/Notifications.js";
-import Upgrade from "views/Upgrade.js";
-import BaoHiem from "views/BaoHiem.js";
+import Insurance from "views/Insurance";
 
 const dashboardRoutes = [
   {
@@ -63,7 +62,7 @@ const dashboardRoutes = [
     path: "/insurances",
     name: "Insurances",
     icon: "nc-icon nc-bell-55",
-    component: BaoHiem,
+    component: Insurance,
     layout: "/admin"
   }
 ];
